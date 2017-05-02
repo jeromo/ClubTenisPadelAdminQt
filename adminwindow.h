@@ -2,6 +2,9 @@
 #define ADMINWINDOW_H
 
 #include <QMainWindow>
+#include <QtWidgets>
+#include <QtSql>
+
 
 namespace Ui {
 class AdminWindow;
@@ -13,10 +16,15 @@ class AdminWindow : public QMainWindow
 
 public:
     explicit AdminWindow(QWidget *parent = 0);
-    ~MainWindow();
+    ~AdminWindow();
 
 private:
+    void showError(const QSqlError &err);
+    QSqlRelationalTableModel *model;
+    int playerIdx, genreIdx;
     Ui::AdminWindow *ui;
 };
 
 #endif // ADMINWINDOW_H
+
+

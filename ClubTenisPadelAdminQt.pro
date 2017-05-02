@@ -5,7 +5,7 @@
 #-------------------------------------------------
 
 QT       += core gui
-
+QT       += sql
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 TARGET = ClubTenisPadelAdminQt
@@ -27,7 +27,8 @@ SOURCES += main.cpp \
     adminwindow.cpp
 
 HEADERS  += \
-    adminwindow.h
+    adminwindow.h \
+    initdb.h
 
 FORMS    += \
     adminwindow.ui
